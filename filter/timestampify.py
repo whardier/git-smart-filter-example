@@ -5,5 +5,9 @@ import sys
 
 import pprint
 
-pprint.pprint(os.environ)
-pprint.pprint(sys.argv)
+a = open('/tmp/wut.txt', 'w')
+a.write(pprint.pformat(os.environ, width=10) + os.linesep)
+a.write(pprint.pformat(os.environ, width=10) + os.linesep)
+a.close()
+
+
