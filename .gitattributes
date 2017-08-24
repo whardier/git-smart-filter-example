@@ -1,1 +1,1 @@
-data/*.txt filter=updatetimestamp
+data/*.txt filter=timestampify
