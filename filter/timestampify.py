@@ -3,11 +3,12 @@
 import os
 import sys
 
-import pprint
+import json
 
 a = open('/tmp/wut.txt', 'w')
-a.write(pprint.pformat(os.environ, width=10) + os.linesep)
-a.write(pprint.pformat(sys.argv, width=10) + os.linesep)
+a.write(json.dumps([os.environ], indent=4) + os.linesep)
+a.write(json.dumps([sys.argv], indent=4) + os.linesep)
+a.write(json.dumps([sys.stdin.read()], indent=4) + os.linesep)
 a.close()
 
 
