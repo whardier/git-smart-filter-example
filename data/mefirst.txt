@@ -1,9 +1,19 @@
+thisn:11729
 This is a text file that has the next line set to an odd little timestamp thingeroozie.
+
+
 
 This timestamp right here ( TIMESTAMP ) is pretty neat. //TIMESTAMPIFY:EPOCH:TIMESTAMP:
 
+
+
 It should be a comment char followed by TIMESTAMPIFY followed by a colon followed by a function name EPOCH and then the variable to substitute and another colon as a placemark to reverse the transformation.
+
+
 
 Really. It should.
 
-Really. Honest. Yup.
+
+
+Really. Honest. Yup..
+
