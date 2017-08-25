@@ -7,5 +7,7 @@ import pprint
 
 buffer = sys.stdin.read()
 
+pprint.pprint(sys.argv, stream=sys.stderr)
+
 sys.stderr.write(buffer)
 sys.stdout.write(buffer)
