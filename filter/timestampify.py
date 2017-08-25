@@ -5,9 +5,6 @@ import sys
 
 import pprint
 
-buffer = sys.stdin.read()
-
-pprint.pprint([os.getpid(), sys.argv], stream=sys.stderr)
-
-sys.stderr.write(buffer)
-sys.stdout.write(buffer)
+for line in sys.stdin.readlines():
+    sys.stderr.write(repr([os.getpid(), sys.argv, line.strip()]))
+    sys.stdout.write(line)

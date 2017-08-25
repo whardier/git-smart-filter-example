@@ -6,4 +6,4 @@ It should be a comment char followed by TIMESTAMPIFY followed by a colon followe
 
 Really. It should.
 
-Really. Honest.
+Really. Honest. Yup
