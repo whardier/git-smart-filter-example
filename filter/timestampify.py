@@ -35,7 +35,16 @@ for line in sys.stdin.readlines():
             smudge_var = ('%.3f' % time.time()).replace('.', '')
 
             line_str = line_str.replace(clean_var, smudge_var)
-            var_str = var_str.replace(var_str.strip(), 'TIMESTAMPIFY:EPOCH:' + clean_var + ':' + smudge_var) #Cheap trick to deal with agnostic line endings
+            var_str = var_str.replace(var_str.strip(), 'TIMESTAMPIFY:EPOCH:' + clean_var + ':' + smudge_var)
+
+            line = line_str + var_str
+
+        elif filter == 'SMUDGE':
+
+            smudge_var = vars[2]
+
+            line_str = line_str.replace(smudge_var, clean_var)
+            var_str = var_str.replace(var_str.strip(), 'TIMESTAMPIFY:EPOCH:' + clean_var + ':')
 
             line = line_str + var_str
 
