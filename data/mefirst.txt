@@ -1,4 +1,3 @@
-12639
 This is a text file that has the next line set to an odd little timestamp thingeroozie.
 
 This timestamp right here ( TIMESTAMP ) is pretty neat. //TIMESTAMPIFY:EPOCH:TIMESTAMP:
@@ -7,4 +6,4 @@ It should be a comment char followed by TIMESTAMPIFY followed by a colon followe
 
 Really. It should.
 
-Really. Honest. Yup.......
+Really. Honest. Yup........
