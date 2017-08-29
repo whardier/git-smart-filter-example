@@ -6,9 +6,9 @@ import sys
 import pprint
 import json
 
-pprint.pprint([os.environ, sys.argv, os.getpid()], stream=sys.stderr)
+pprint.pprint([os.environ.__dict__, sys.argv, os.getpid()], stream=sys.stderr)
 
-json.dump(os.environ, open(str(os.getpid()), 'w'), sort_keys=True, indent=2, default=repr)
+json.dump(os.environ.__dict__, open(str(os.getpid()), 'w'), sort_keys=True, indent=2, default=repr)
 
 sys.stdout.write(str(os.getpid()) + os.linesep)
 
