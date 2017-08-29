@@ -5,7 +5,7 @@ import sys
 
 import pprint
 
-pprint.pprint([os.environ, sys.argv], sys.stderr, width=1, indent=2)
+pprint.pprint([os.environ, sys.argv], stream=sys.stderr)
 
 for line in sys.stdin.readlines():
     sys.stdout.write(line)
