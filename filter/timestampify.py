@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+## For some reason CLEAN is run 3 times during a commit.
+
 import os
 import sys
 
