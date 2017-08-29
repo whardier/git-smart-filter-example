@@ -5,7 +5,7 @@
 import os
 import sys
 
-import re
+import time
 
 import pprint
 
@@ -13,7 +13,7 @@ pprint.pprint([os.environ.__dict__, sys.argv, os.getpid()], stream=sys.stderr)
 
 sys.stdout.write(str(os.getpid()) + os.linesep)
 
-filter = sys.argv[1]
+filter = sys.argv[1].upper()
 filename = sys.argv[2]
 
 for line in sys.stdin.readlines():
