@@ -32,13 +32,14 @@ for line in sys.stdin.readlines():
         clean_var = vars[1]
         if filter == 'CLEAN':
             smudge_var = ('%.3f' % time.time()).replace('.', '')
-        new_line_str = line_str
-        new_line_str.replace(clean_var, smudge_var)
 
-        sys.stderr.write('DONE:' + line_str + os.linesep)
-        sys.stderr.write('DONE:' + new_line_str + os.linesep)
+            new_line_str = line_str
+            new_line_str.replace(clean_var, smudge_var)
 
-        sys.stderr.flush()
+            sys.stderr.write('DONE:' + line_str + os.linesep)
+            sys.stderr.write('DONE:' + new_line_str + os.linesep)
+
+            sys.stderr.flush()
 
     sys.stdout.write(line)
     sys.stdout.flush()
